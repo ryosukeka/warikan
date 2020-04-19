@@ -2,7 +2,7 @@
 {% block content %}
       <table border=1 id=container>
         <tr>
-          <th>date</th><th>item</th><th>payer</th><th>amount</th>
+          <th>date</th><th>item</th><th>payer</th><th>amount</th><th>edit</th>
         </tr>
           {% for trac in tracs %}
         <tr>
@@ -10,6 +10,7 @@
           <td>{{ trac.item }}</td>
           <td>{{ trac.payer }}</td>
           <td>{{ trac.amount }}</td>
+          <td><a class="btn btn-default" href="{% url 'post_edit' pk=trac.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
         </tr>
           {% endfor %}
       </table>
