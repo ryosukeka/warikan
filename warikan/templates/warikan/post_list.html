@@ -1,22 +1,13 @@
-<html>
-  <head>
-    <title>warikan</title>
-  </head>
-  <body>
-    <div>
-      <h1><a href="/">Django Girls Blog</a></h1>
-    </div>
+{% extends 'warikan/base.html' %}
+{% block content %}
+      <table border=1 id=container>
+        <tr>
+          <th>payer</th><th>amount</th>
+        </tr>
+        <tr>
+          <td>{{ paying }}</td><td>{{ amount }}</td>
+        </tr>
 
-    <div>
-      <p>published:14.06.2014, 12:14</p>
-      <h2><a href ="">My first post</a></h2>
-      <p>Aenean eu leo quam.</p>
-    </div>
-
-    <div>
-      <p>published:14.06.2014, 12:14</p>
-      <h2><a href ="">My secondt post</a></h2>
-      <p>Aenean eu leo quam.</p>
-    </div>    
-  </body>
-</html>
+      </table>
+    <h2><a href="{% url 'detail' %}">detail</a></h2>
+{% endblock %}

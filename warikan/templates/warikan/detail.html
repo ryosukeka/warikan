@@ -1,0 +1,16 @@
+{% extends 'warikan/base.html' %}
+{% block content %}
+      <table border=1 id=container>
+        <tr>
+          <th>date</th><th>item</th><th>payer</th><th>amount</th>
+        </tr>
+          {% for trac in tracs %}
+        <tr>
+          <td>{{ trac.date }}</td>
+          <td>{{ trac.item }}</td>
+          <td>{{ trac.payer }}</td>
+          <td>{{ trac.amount }}</td>
+        </tr>
+          {% endfor %}
+      </table>
+{% endblock %}

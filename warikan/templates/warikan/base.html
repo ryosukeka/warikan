@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/warikan.css' %}">
+    <title>warikan</title>
+  </head>
+  <body>
+    <div class="page-header">
+      <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- {% for trac in tracs %}
+  <div class="post">
+    <p>date: {{ trac.date }}</p>
+    <h2><a href="">item: {{ trac.item }}</a></h2>
+    <p> {{ trac.payer }} paid {{ trac.amount }}JPY.</p>
+  </div>
+{% endfor %} -->
