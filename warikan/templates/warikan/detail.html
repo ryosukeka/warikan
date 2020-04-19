@@ -10,7 +10,11 @@
           <td>{{ trac.item }}</td>
           <td>{{ trac.payer }}</td>
           <td>{{ trac.amount }}</td>
-          <td><a class="btn btn-default" href="{% url 'post_edit' pk=trac.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+          {% if user.is_authenticated %}
+            <td><a class="btn btn-default" href="{% url 'post_edit' pk=trac.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+          {% else %}
+            <td>cannot edit</td>
+          {% endif %}
         </tr>
           {% endfor %}
       </table>

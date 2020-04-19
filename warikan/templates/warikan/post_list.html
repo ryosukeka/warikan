@@ -10,5 +10,7 @@
 
       </table>
     <h2><a href="{% url 'detail' %}">detail</a></h2>
+    {% if user.is_authenticated %}
     <h2><a href="{% url 'post_new' %}">new entry</a></h2>
+    {% endif %}
 {% endblock %}
